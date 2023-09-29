@@ -14,9 +14,10 @@ if __name__ == "__main__":
     x = np.random.normal(size=(4,10))
 
     x_reshape = x[None]
-    x_normal = x[:, :, None]
+    x_normal = x[:, None]
 
-    x_subtract = x_normal.T - x_normal
-    distance = np.sum((x_subtract)**2, axis=1)
+    x_subtract = x_normal - x_reshape
+    print(x_subtract.shape)
+    distance = np.sum((x_subtract)**2, axis=-1)
     print("Array mult:", array_mult)
     print("Distance: ", distance)
