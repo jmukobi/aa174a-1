@@ -6,7 +6,7 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 install(PROGRAMS
-    scripts/heartbeat.py
+    scripts/constant_control.py
     DESTINATION lib/${PROJECT_NAME}
 )
 
